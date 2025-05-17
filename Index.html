@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moringa Magic - #1 Superfood for Energy, Joints & Immunity. 65% Off! Made in USA.">
+    <meta name="keywords" content="Moringa Magic, superfood, USA, health supplement">
+    <meta http-equiv="Cache-Control" content="public, max-age=3600">
+    <title>Moringa Magic® | Official USA Site | 65% Off</title>
+    <style>
+        :root {
+            --primary: #1B4D1E;
+            --secondary: #FFCA28;
+            --accent: #E01E1E;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            line-height: 1.4;
+            background: #f9f9f9;
+        }
+        .header {
+            background: var(--primary);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .live-activity {
+            background: #FFF3CD;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 50px;
+        }
+        #livePurchases::before {
+            content: "🛒 ";
+            color: var(--primary);
+        }
+        .hero {
+            background: linear-gradient(rgba(27,77,30,0.9), rgba(27,77,30,0.8)), url('https://via.placeholder.com/800x600?text=Hero');
+            background-size: cover;
+            color: white;
+            padding: 30px 15px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 1.8rem;
+            margin: 0 0 10px;
+        }
+        .hero h3 {
+            font-size: 1rem;
+            margin: 0 0 15px;
+        }
+        .video-testimonial {
+            width: 100%;
+            max-width: 400px;
+            margin: 15px auto;
+            aspect-ratio: 9 / 16;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .video-testimonial iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .cta-button {
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin: 15px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            touch-action: manipulation;
+        }
+        .cta-button:hover {
+            background: #FFE082;
+        }
+        .sticky-cta {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            z-index: 1000;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+        .guarantee-badge {
+            background: white;
+            color: var(--primary);
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 15px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .countdown {
+            background: var(--accent);
+            color: white;
+            padding: 15px;
+            font-size: 1.2rem;
+            text-align: center;
+            font-weight: bold;
+            margin: 15px auto;
+            border-radius: 8px;
+            max-width: 400px;
+        }
+        .stock-alert {
+            color: var(--accent);
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .trust-seals {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .trust-seals img {
+            height: 40px;
+        }
+        .reviews {
+            padding: 20px 15px;
+            text-align: center;
+            background: white;
+        }
+        .reviews .stars {
+            color: #FFC107;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .customer-feed {
+            padding: 20px 15px;
+            text-align: center;
+            background: #f8f9fa;
+        }
+        .customer-feed p {
+            font-size: 0.9rem;
+            margin: 8px 0;
+            color: #222;
+        }
+        .scientific-section {
+            background: white;
+            padding: 20px 15px;
+            text-align: center;
+        }
+        .faq-section {
+            padding: 20px 15px;
+            background: #f8f9fa;
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .faq-section h2 {
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        .faq-section details {
+            margin: 10px 0;
+            padding: 8px;
+            background: white;
+            border-radius: 6px;
+        }
+        .faq-section summary {
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        .faq-section p {
+            font-size: 0.85rem;
+            margin: 5px 0;
+        }
+        .exit-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 90%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .popup-content h2 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin: 0 0 10px;
+        }
+        .popup-content p {
+            font-size: 0.9rem;
+            margin: 8px 0;
+        }
+        .popup-content .cta-button {
+            background: var(--accent);
+            color: white;
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.5rem; }
+            .hero h3 { font-size: 0.9rem; }
+            .cta-button { font-size: 1rem; padding: 12px 25px; }
+            .sticky-cta { font-size: 0.9rem; padding: 10px 20px; }
+            .video-testimonial { max-width: 100%; }
+            .countdown { font-size: 1rem; }
+            .header { font-size: 0.9rem; }
+            .live-activity { font-size: 0.8rem; }
+            .stock-alert { font-size: 0.9rem; }
+            .guarantee-badge { font-size: 0.8rem; }
+            .reviews h2 { font-size: 1.2rem; }
+            .scientific-section h2 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        ⚡ 1,283 Ordered Today | Only <span id="stock">47</span> Left!
+    </div>
+
+    <div class="live-activity">
+        <span id="livePurchases">James from TX bought 3 bottles!</span>
+    </div>
+
+    <div class="hero">
+        <h1>🇺🇸 #1 Superfood Trusted by 45,000+</h1>
+        <h3>Doctor-Endorsed for Energy, Joints & Immunity</h3>
+        
+        <div class="video-testimonial">
+            <iframe src="https://www.officialmoringamagic.com/home-video?aff=Nitesh9" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="stock-alert">
+            🚨 Only <span id="stock2">47</span> Bottles Left!
+        </div>
+
+        <div class="countdown" id="countdown">
+            ⏳ 65% OFF Ends: <span id="timer">29:59</span>
+        </div>
+
+        <a href="https://www.officialmoringamagic.com/?aff=Nitesh9" class="cta-button">
+            🇺🇸 Buy Now & Save 65% →
+        </a>
+
+        <div class="guarantee-badge">
+            ✅ 365-Day Guarantee | 🇺🇸 Made in USA
+        </div>
+
+        <div class="trust-seals">
+            <img src="https://via.placeholder.com/40?text=SSL" alt="Secure">
+            <img src="https://via.placeholder.com/40?text=FDA" alt="FDA">
+            <img src="https://via.placeholder.com/40?text=Visa" alt="Visa">
+        </div>
+    </div>
+
+    <div class="reviews">
+        <h2>⭐ 4.9/5 from 12,345+ Reviews</h2>
+        <div class="stars">★★★★★</div>
+        <p>"More energy, no joint pain!" – Linda, CA</p>
+        <p>"Blood sugar stable!" – Mike, FL</p>
+    </div>
+
+    <div class="customer-feed">
+        <h2>🛒 Buying Now</h2>
+        <div id="liveCustomerFeed">
+            <p>Sarah (58), OH: "Arthritis pain gone!"</p>
+            <p>Mike (62), FL: "Blood sugar stable!"</p>
+        </div>
+    </div>
+
+    <div class="scientific-section">
+        <h2>📚 Harvard Research</h2>
+        <img src="https://via.placeholder.com/200?text=Study" alt="Study" style="max-width:200px;">
+        <p>"Reduces inflammation." – Journal of Nutrition</p>
+    </div>
+
+    <div class="faq-section">
+        <h2>FAQs</h2>
+        <details>
+            <summary>What is Moringa Magic?</summary>
+            <p>Doctor-endorsed superfood for energy, joints, immunity.</p>
+        </details>
+        <details>
+            <summary>Made in USA?</summary>
+            <p>Yes, in FDA-compliant facilities.</p>
+        </details>
+        <details>
+            <summary>Refund policy?</summary>
+            <p>365-day money-back guarantee.</p>
+        </details>
+    </div>
+
+    <a href="https://www.officialmoringamagic.com/?aff=Nitesh9" class="sticky-cta">
+        🔥 65% Off Now →
+    </a>
+
+    <div class="exit-popup" id="exitPopup">
+        <div class="popup-content">
+            <h2>Don’t Miss Out!</h2>
+            <p>Extra 10% Off + Free Shipping!</p>
+            <p>Code: <strong>SAVE10</strong></p>
+            <a href="https://www.officialmoringamagic.com/?aff=Nitesh9" class="cta-button">Claim Now →</a>
+        </div>
+    </div>
+
+    <script>
+        const purchases = [
+            "Linda, CA: 2 bottles!",
+            "John, NY: 6-month supply!",
+            "Emily, TX: 3 bottles!",
+            "Mark, AZ: 4 bottles!",
+            "Jessica, NV: 5 bottles!"
+        ];
+        let count = 0;
+        setInterval(() => {
+            document.getElementById('livePurchases').textContent = purchases[count % purchases.length];
+            count++;
+        }, 4000);
+
+        let time = 29 * 60 + 59;
+        const timer = setInterval(() => {
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            document.getElementById('timer').textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            time--;
+            if (time < 0) clearInterval(timer);
+        }, 1000);
+
+        let stock = 47;
+        setInterval(() => {
+            if (stock > 10) {
+                stock -= Math.floor(Math.random() * 3);
+                document.getElementById('stock').textContent = stock;
+                document.getElementById('stock2').textContent = stock;
+            }
+        }, 15000);
+
+        const testimonials = [
+            "David, CO: Lost 18lbs!",
+            "Susan, GA: No knee pain!",
+            "Robert, MI: BP normalized!",
+            "Lisa, IL: Energy up!",
+            "Tom, OR: Joints better!"
+        ];
+        setInterval(() => {
+            const feed = document.getElementById('liveCustomerFeed');
+            const newEntry = document.createElement('p');
+            newEntry.textContent = testimonials[Math.floor(Math.random() * testimonials.length)];
+            feed.appendChild(newEntry);
+            if (feed.children.length > 4) feed.removeChild(feed.children[0]);
+        }, 6000);
+
+        let popupShown = false;
+        document.addEventListener('mouseout', (e) => {
+            if (e.relatedTarget == null && !popupShown && e.clientY < 50) {
+                document.getElementById('exitPopup').style.display = 'flex';
+                popupShown = true;
+            }
+        });
+        document.getElementById('exitPopup').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                e.currentTarget.style.display = 'none';
+            }
+        });
+    </script>
+
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-GA-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YOUR-GA-ID');
+    </script>
+</body>
+</html>
